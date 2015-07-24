@@ -1,0 +1,16 @@
+/dist
+/node_modules
+/bower_components
+/.sass-cache
+/temp
+app.config.auto.generated.js
+src_todo_report.md
+/fonts
+app.css
+app.css.map
+app.js.map
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
