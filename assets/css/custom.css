@@ -1,0 +1,38 @@
+.list-title{
+	margin-left:5px;
+}
+
+.list-outer{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #CCC;
+	border-radius: 8px;
+}
+
+.list-badge{
+	position: absolute;
+	margin-left: -15px;
+	margin-top: -5px;
+}
+
+.list-group-item{
+	width: 100%;
+	margin-bottom: 10px !important;
+}
+
+.spacer{
+	width: 100%;
+	height: 5px;
+}
+
+.inner-title{
+	font-size: 14px;
+	font-weight: bold;
+}
+.form-control{
+	width: auto;
+	width: 30 !important;
+}
+.author{
+	font-size: 11px;
+}
