@@ -1,0 +1,28 @@
+<h1 class="blue">Reddit List 
+	<button type="button" class="btn btn-warning pull-right" ng-click="list.searchSubmit()">Search</button> 
+    <input class="pull-right col-sm-3 form-control" ng-model="list.search" type="text" placeholder="" />
+</h1>
+<div class="spacer"></div>
+<ul class="list-group" ng-repeat="x in list.data.lists">
+	<li class="list-group-item  col-sm-12">
+	    <div class="row">
+	        <div class="col-sm-12">
+	            <div class="col-sm-1">
+	                <span class="badge pull-left list-badge alert-danger" title="Total Likes">
+			  			{{x.data.score}}
+			  		</span>
+	                <img class="img-thumbnail" src="{{x.data.thumbnail}}" alt="{{x.data.title}}" width="70" height="70" >
+                </div>
+                <div class="list-title col-sm-10">
+                    <span class="inner-title">
+                    	<a href="{{x.data.url}}" target="_blank">{{x.data.title}}</a>
+                    </span>
+                    <br>
+                    <span class="author">Author: <b>{{x.data.author}}</b></span>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+
