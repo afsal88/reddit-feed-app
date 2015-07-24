@@ -1,6 +1,11 @@
 (function() {
 
-	angular.module('feed', ['ui.bootstrap', 'ui.utils',	'ui.router', 'ngAnimate' ]);
+	angular.module('feed', [
+		'ui.bootstrap',							// UI Bootstrap 
+		'ui.utils',								// UI Utils
+		'ui.router',							// UI Router
+		'ngAnimate'								// NG Animate
+	]);
 
 
 	function config($stateProvider){
