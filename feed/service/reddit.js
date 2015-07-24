@@ -1,6 +1,7 @@
 (function() {
 	
-	angular.module('feed').factory('reddit',function($http,$q) {
+
+	function redditService($http,$q) {
 
 		var reddit = {};
 
@@ -16,7 +17,7 @@
 			});   
 			return deferred.promise;
 
-		},
+		};
 		reddit.searchItems = function(keyword){
 			var deferred = $q.defer(); 
 			$http({
@@ -28,9 +29,12 @@
 				deferred.resolve(false);
 			});   
 			return deferred.promise;
-		}
+		};
 
 		return reddit;
-	});
+	}
+
+
+	angular.module('feed').factory('reddit',redditService);
 
 })();
