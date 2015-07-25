@@ -5,7 +5,7 @@
 
 		var reddit = {};
 
-		reddit.getItems = function(){
+		function getItems(){
 			var deferred = $q.defer(); 
 			$http({
 				method: 'GET',
@@ -17,8 +17,9 @@
 			});   
 			return deferred.promise;
 
-		};
-		reddit.searchItems = function(keyword){
+		}
+
+		function searchItems(keyword){
 			var deferred = $q.defer(); 
 			$http({
 				method: 'GET',
@@ -29,8 +30,10 @@
 				deferred.resolve(false);
 			});   
 			return deferred.promise;
-		};
+		}
 
+		reddit.getItems = getItems;
+		reddit.searchItems = searchItems;
 		return reddit;
 	}
 
