@@ -1,6 +1,6 @@
 (function() {
 
-	function ListCtrl($scope, reddit){
+	var listCtrlFn = function($scope, reddit){
 		var vm = this;
 		vm.data = {};
 
@@ -11,17 +11,8 @@
 			}
 		});
 
-		// Get List with respect to Searched keyword
-		vm.searchSubmit = function(){
-			var searchKey = vm.search;
-			reddit.searchItems(searchKey).then(function(res) {
-				if(!res.error){
-					vm.data.lists = res.data.children;
-				}
-			});
-		};
-	}
+	};
 
-	angular.module('feed').controller('ListCtrl', ListCtrl);
+	angular.module('feed').controller('ListCtrl', listCtrlFn);
 
 })();

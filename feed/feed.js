@@ -8,7 +8,7 @@
 	]);
 
 
-	function config($stateProvider){
+	var configFn = function($stateProvider){
 		$stateProvider.state('list', {
 	        url: '/list',
 	        templateUrl: 'feed/list/list.html',
@@ -16,10 +16,10 @@
 	        controllerAs: 'list'
 	    });
 	    /* Add New States Above */
-	}
+	};
 
 
-	angular.module('feed').config(config);
+	angular.module('feed').config(configFn);
 
 })();
 

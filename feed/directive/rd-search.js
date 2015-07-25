@@ -2,7 +2,7 @@
 
 	// Directive for getting List with respect to Searched keyword
 	// Currently works with enter key submission
-	function rdSearch(reddit) {
+	var rdSearchFn = function(reddit) {
 		return {
 			restrict: 'A',
 			link: function(scope, element, attrs, fn) {
@@ -18,8 +18,8 @@
 				});
 			}
 		};
-	}
+	};
 
-	angular.module('feed').directive('rdSearch', rdSearch);
+	angular.module('feed').directive('rdSearch', rdSearchFn);
 
 })();

@@ -1,12 +1,12 @@
 (function() {
 	
 
-	function redditService($http,$q) {
+	var redditServiceFn = function($http,$q) {
 
 		var reddit = {};
 
 		// Service layer for getting intial List
-		function getItems(){
+		var getItemsFn = function(){
 			var deferred = $q.defer(); 
 			$http({
 				method: 'GET',
@@ -18,10 +18,10 @@
 			});   
 			return deferred.promise;
 
-		}
+		};
 
 		// Service layer for getting List with respect to Searched keyword
-		function searchItems(keyword){
+		var searchItemsFn = function(keyword){
 			var deferred = $q.defer(); 
 			$http({
 				method: 'GET',
@@ -32,17 +32,17 @@
 				deferred.resolve(false);
 			});   
 			return deferred.promise;
-		}
+		};
 
 		/************Functions available in redditService***********/
-		reddit.getItems = getItems;
-		reddit.searchItems = searchItems;
+		reddit.getItems = getItemsFn;
+		reddit.searchItems = searchItemsFn;
 		/************Functions available in redditService***********/
 
 		return reddit;
-	}
+	};
 
 
-	angular.module('feed').factory('reddit',redditService);
+	angular.module('feed').factory('reddit',redditServiceFn);
 
 })();
