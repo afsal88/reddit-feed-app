@@ -5,6 +5,7 @@
 
 		var reddit = {};
 
+		// Service layer for getting intial List
 		function getItems(){
 			var deferred = $q.defer(); 
 			$http({
@@ -19,6 +20,7 @@
 
 		}
 
+		// Service layer for getting List with respect to Searched keyword
 		function searchItems(keyword){
 			var deferred = $q.defer(); 
 			$http({
@@ -32,8 +34,11 @@
 			return deferred.promise;
 		}
 
+		/************Functions available in redditService***********/
 		reddit.getItems = getItems;
 		reddit.searchItems = searchItems;
+		/************Functions available in redditService***********/
+
 		return reddit;
 	}
 
