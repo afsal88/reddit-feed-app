@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-sm-1">
+            <span class="badge pull-left list-badge alert-danger" title="Total Likes">
+	  			{{x.data.score}}
+	  		</span>
+            <img class="img-thumbnail" src="{{x.data.thumbnail}}" alt="{{x.data.title}}" width="70" height="70" >
+        </div>
+        <div class="list-title col-sm-10">
+            <span class="inner-title">
+            	<a href="{{x.data.url}}" target="_blank">{{x.data.title}}</a>
+            </span>
+            <br>
+            <span class="author">Author: <b>{{x.data.author}}</b></span>
+        </div>
+    </div>
+</div>
