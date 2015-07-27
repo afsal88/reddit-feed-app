@@ -9,7 +9,7 @@
 
 			}
 		};
-	}
+	};
 	
 
 	angular.module('feed').directive('rdList', rdListFn);
