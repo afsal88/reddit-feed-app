@@ -6,7 +6,7 @@
 		return {
 			restrict: 'A',
 			link: function(scope, element, attrs, fn) {
-				$(element).keypress(function(event) {
+				element.keypress(function(event) {
 					var searchKey = this.value;
 					if(event.which === 13) {
 						reddit.searchItems(searchKey).then(function(res) {
